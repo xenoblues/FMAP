@@ -26,7 +26,7 @@ data
 ### Pretrained Model
 
 We provide pretrained model [Google Drive](https://drive.google.com/drive/folders/18bbfFdvr80SDy_o3_ohZhnH-cFO8o_k3?usp=sharing) .
-Please put the 'ckpt_ema_500.pt' (for HumanEva) in the `./results/he/models` and 'ckpt_ema_1000.pt' (for Human36M) in the `./results/h36,/models`.
+Please put the 'ckpt_ema_500.pt' (for HumanEva) in the `./results/he/models` and 'ckpt_ema_1000.pt' (for Human36M) in the `./results/h36m/models`.
 
 
 ### Training
