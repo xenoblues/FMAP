@@ -47,8 +47,8 @@ def pose_generator(data_set, model_select, generator_model, cfg, mode=None,
                     poses['context'] = gt
                     poses['gt'] = gt
                 else:
-                    poses[f'HumanMAC_{draw_order_indicator + 1}'] = gt
-                    poses[f'HumanMAC_{draw_order_indicator + 2}'] = gt
+                    poses[f'FMAP_{draw_order_indicator + 1}'] = gt
+                    poses[f'FMAP_{draw_order_indicator + 2}'] = gt
                 gt = np.expand_dims(gt, axis=0)
                 if cfg.dataset != 'assemble':
                     traj_np = gt[..., 1:, :].reshape([gt.shape[0], cfg.t_his + cfg.t_pred, -1])
@@ -87,10 +87,10 @@ def pose_generator(data_set, model_select, generator_model, cfg, mode=None,
 
             if k == 0:
                 for j in range(traj_est.shape[0]):
-                    poses[f'HumanMAC_{j}'] = traj_est[j]
+                    poses[f'FMAP_{j}'] = traj_est[j]
             else:
                 for j in range(traj_est.shape[0]):
-                    poses[f'HumanMAC_{j + draw_order_indicator + 2 + 1}'] = traj_est[j]
+                    poses[f'HFMAP_{j + draw_order_indicator + 2 + 1}'] = traj_est[j]
 
             if draw_order_indicator == -1:
                 draw_order_indicator = j

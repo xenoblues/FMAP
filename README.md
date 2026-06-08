@@ -58,6 +58,17 @@ Evaluate on HumanEva-I:
 python main_fm.py --cfg he --mode eval --ckpt ./results/he/models/ckpt_ema_500.pt
 ```
 
+### Visualization
+#### Human3.6M
+![](./inference/h36m_pred/out/pred_Directions.gif)
+![](./inference/h36m_pred/out/pred_Discussion 1.gif)
+![](./inference/h36m_pred/out/pred_Eating.gif)
+#### HumanEVA-I
+![](./inference/he_pred/out/pred_Walking 1 chunk0.gif)
+![](./inference/he_pred/out/pred_Gestures 1 chunk1.gif)
+![](./inference/he_pred/out/pred_Jog 1 chunk0.gif)
+More visualization results can be seen in the 'inference' folder.
+
 ### Acknowledgments
 
 Part of the code is borrowed from the [HumanMAC](https://github.com/LinghaoChan/HumanMAC) repo.

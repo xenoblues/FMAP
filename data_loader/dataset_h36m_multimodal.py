@@ -29,7 +29,9 @@ class DatasetH36M_multi(Dataset):
             self.traj_dim += 3
 
     def prepare_data(self):
-        self.data_file = os.path.join('D:\HumanMAC\data', 'data_3d_h36m.npz')
+        current_path = os.path.dirname(os.path.abspath(__file__))
+        root_path = os.path.dirname(current_path)
+        self.data_file = os.path.join(root_path, 'data/data_3d_h36m.npz')
         self.subjects_split = {'train': [1, 5, 6, 7, 8],
                                'test': [9, 11]}
         self.subjects = ['S%d' % x for x in self.subjects_split[self.mode]]

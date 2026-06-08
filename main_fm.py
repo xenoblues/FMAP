@@ -25,7 +25,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--cfg', default='he', help='h36m or he')
     parser.add_argument('--generator', default='flow_matching', type=str, help='flow_matching')
-    parser.add_argument('--mode', default='eval', help='train / eval / pred / draw')
+    parser.add_argument('--mode', default='pred', help='train / eval / pred / draw')
     parser.add_argument('--iter', type=int, default=0)
     parser.add_argument('--seed', type=int, default=0)
     parser.add_argument('--device', type=str,default=torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu'))
@@ -85,6 +85,7 @@ if __name__ == '__main__':
     elif args.mode == 'eval':
         ckpt = torch.load(args.ckpt)
         model.load_state_dict(ckpt)
+        model.eval()
         # prepare full evaluation dataset
         if dataset_multi_test is not None:
             multimodal_dict = get_multimodal_gt_full(logger, dataset_multi_test, args, cfg)
@@ -97,4 +98,5 @@ if __name__ == '__main__':
     else:
         ckpt = torch.load(args.ckpt)
         model.load_state_dict(ckpt)
+        model.eval()
         demo_visualize(args.mode, cfg, model, generator, dataset)

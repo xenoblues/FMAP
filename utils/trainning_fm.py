@@ -16,7 +16,7 @@ from flow_matching.path import CondOTProbPath, MixtureDiscreteProbPath
 from flow_matching.path.scheduler import PolynomialConvexScheduler
 from torch.nn.modules import Module
 from flow_matching.utils import ModelWrapper
-from adan import Adan
+# from adan import Adan
 
 def skewed_timestep_sample(num_samples: int, device: torch.device) -> torch.Tensor:
     P_mean = -1.2
