@@ -60,13 +60,13 @@ python main_fm.py --cfg he --mode eval --ckpt ./results/he/models/ckpt_ema_500.p
 
 ### Visualization
 #### Human3.6M
-![](./inference/h36m_pred/out/pred_Directions.gif)
-![](./inference/h36m_pred/out/pred_Discussion 1.gif)
-![](./inference/h36m_pred/out/pred_Eating.gif)
+![h36m1](./inference/h36m_pred/out/pred_Directions.gif)
+![h36m2](./inference/h36m_pred/out/pred_Discussion 1.gif)
+![h36m3](./inference/h36m_pred/out/pred_Eating.gif)
 #### HumanEVA-I
-![](./inference/he_pred/out/pred_Walking 1 chunk0.gif)
-![](./inference/he_pred/out/pred_Gestures 1 chunk1.gif)
-![](./inference/he_pred/out/pred_Jog 1 chunk0.gif)
+![he1](./inference/he_pred/out/pred_Walking 1 chunk0.gif)
+![he2](./inference/he_pred/out/pred_Gestures 1 chunk1.gif)
+![he3](./inference/he_pred/out/pred_Jog 1 chunk0.gif)
 More visualization results can be seen in the 'inference' folder.
 
 ### Acknowledgments
